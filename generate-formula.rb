@@ -103,7 +103,9 @@ class FormulaGenerator
         puts "  Processing resource: #{resource_name}"
 
         pattern = resource_info['pattern']
-        asset = release.assets.find { |a| a.name.match?(/#{Regexp.escape(pattern.gsub('*', ''))}/) }
+        # Convert wildcard pattern to regex (e.g., "eengine-*-mac-arm64-sbcl" -> /eengine-.*-mac-arm64-sbcl/)
+        regex_pattern = pattern.gsub('*', '.*')
+        asset = release.assets.find { |a| a.name.match?(/^#{regex_pattern}$/) }
         raise "Asset matching '#{pattern}' not found in release #{version}" unless asset
 
         url = asset.browser_download_url
