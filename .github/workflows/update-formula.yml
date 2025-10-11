@@ -35,18 +35,22 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Update eengine to ${{ github.event.client_payload.version || inputs.version }}"
-          title: "Update eengine to ${{ github.event.client_payload.version || inputs.version }}"
+          commit-message: "chore: update eengine to ${{ github.event.client_payload.version || inputs.version }}"
+          title: "Update eengine formula"
           body: |
-            Automated update triggered from eengine-releases workflow.
+            Automated formula update to version **${{ github.event.client_payload.version || inputs.version }}**
 
             ${{ github.event.client_payload.release_url && format('Release: {0}', github.event.client_payload.release_url) || '' }}
 
             This PR updates the Homebrew formula with:
-            - New version and download URLs
-            - Updated SHA256 checksums for all platforms
-          branch: "update-${{ github.event.client_payload.version || inputs.version }}"
-          delete-branch: true
+            - Version: `${{ github.event.client_payload.version || inputs.version }}`
+            - Updated download URLs for all platforms
+            - Fresh SHA256 checksums
+
+            ---
+            *This PR will be automatically updated with newer versions. Only the latest version matters.*
+          branch: "update-formula"
+          delete-branch: false
           labels: |
             automated
             formula-update
