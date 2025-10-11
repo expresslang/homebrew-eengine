@@ -1,21 +1,21 @@
 {
-  "version": "0.0.0",
+  "version": "5.0.4",
   "expresslang/eengine-releases": {
     "mac-arm64": {
-      "url": "https://github.com/expresslang/eengine-releases/releases/download/eeng-0.0.0/eengine-0.0.0-mac-arm64-sbcl",
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      "url": "https://github.com/expresslang/eengine-releases/releases/download/eeng-5.0.4/eengine-5.0.4-mac-arm64-sbcl",
+      "sha256": "5c73706de72198673df85cfe3f22f8ab4a9d2f5b535e0158c073e8e77d8a90c8"
     },
     "mac-x86-64": {
-      "url": "https://github.com/expresslang/eengine-releases/releases/download/eeng-0.0.0/eengine-0.0.0-mac-x86-64-sbcl",
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      "url": "https://github.com/expresslang/eengine-releases/releases/download/eeng-5.0.4/eengine-5.0.4-mac-x86-64-sbcl",
+      "sha256": "93d0dd33c2e8052a1923c178aab9230728705dacbf80934d8d920ec2dcb0aa91"
     },
     "lnx-x86-64": {
-      "url": "https://github.com/expresslang/eengine-releases/releases/download/eeng-0.0.0/eengine-0.0.0-lnx-x86-64-sbcl",
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      "url": "https://github.com/expresslang/eengine-releases/releases/download/eeng-5.0.4/eengine-5.0.4-lnx-x86-64-sbcl",
+      "sha256": "9d5661b0ac26f881ab792860399e07518e363da43ffbd9412ed64f87b0f47584"
     },
     "lnx-arm64": {
-      "url": "https://github.com/expresslang/eengine-releases/releases/download/eeng-0.0.0/eengine-0.0.0-lnx-arm64-sbcl",
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      "url": "https://github.com/expresslang/eengine-releases/releases/download/eeng-5.0.4/eengine-5.0.4-lnx-arm64-sbcl",
+      "sha256": "fa1ef778b9807174b68c5bcb5f87af6d606dc7ea284c42e082ad038c8488835a"
     }
   }
 }
