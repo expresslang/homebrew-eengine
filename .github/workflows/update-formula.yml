@@ -1,0 +1,52 @@
+name: Update Formula
+
+on:
+  repository_dispatch:
+    types: [update-formula]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to update to (e.g., eeng-5.2.7)'
+        required: true
+        type: string
+
+jobs:
+  update-formula:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Generate formula
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="${{ github.event.client_payload.version || inputs.version }}"
+          echo "Updating formula to version: $VERSION"
+          bundle exec ruby generate-formula.rb --version "$VERSION"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Update eengine to ${{ github.event.client_payload.version || inputs.version }}"
+          title: "Update eengine to ${{ github.event.client_payload.version || inputs.version }}"
+          body: |
+            Automated update triggered from eengine-releases workflow.
+
+            ${{ github.event.client_payload.release_url && format('Release: {0}', github.event.client_payload.release_url) || '' }}
+
+            This PR updates the Homebrew formula with:
+            - New version and download URLs
+            - Updated SHA256 checksums for all platforms
+          branch: "update-${{ github.event.client_payload.version || inputs.version }}"
+          delete-branch: true
+          labels: |
+            automated
+            formula-update

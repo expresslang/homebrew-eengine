@@ -1,0 +1,17 @@
+# Ruby
+Gemfile.lock
+.bundle/
+vendor/
+
+# Generated formula (will be regenerated)
+Formula/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

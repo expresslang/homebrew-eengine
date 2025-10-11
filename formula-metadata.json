@@ -1,0 +1,21 @@
+{
+  "version": "0.0.0",
+  "expresslang/eengine-releases": {
+    "mac-arm64": {
+      "url": "https://github.com/expresslang/eengine-releases/releases/download/eeng-0.0.0/eengine-0.0.0-mac-arm64-sbcl",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "mac-x86-64": {
+      "url": "https://github.com/expresslang/eengine-releases/releases/download/eeng-0.0.0/eengine-0.0.0-mac-x86-64-sbcl",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "lnx-x86-64": {
+      "url": "https://github.com/expresslang/eengine-releases/releases/download/eeng-0.0.0/eengine-0.0.0-lnx-x86-64-sbcl",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "lnx-arm64": {
+      "url": "https://github.com/expresslang/eengine-releases/releases/download/eeng-0.0.0/eengine-0.0.0-lnx-arm64-sbcl",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  }
+}
