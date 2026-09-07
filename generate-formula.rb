@@ -52,6 +52,9 @@ class FormulaGenerator
 
     puts "Fetching SHA256 hashes for #{version}..."
     results = update_sha256_hashes(version)
+    # The template renders @metadata; without this it rendered the metadata
+    # loaded at start-up, one release behind the hashes just fetched.
+    @metadata = results
 
     puts "Generating formula..."
     generate_formula('eengine', 'templates/eengine.rb.erb', 'Formula/eengine.rb')
