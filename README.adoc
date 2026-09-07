@@ -81,10 +81,10 @@ To manually update the formula (for testing or maintenance):
 bundle install
 
 # Generate formula for a specific version
-bundle exec ruby generate-formula.rb --version eeng-5.2.7
+bundle exec ruby generate-formula.rb --version eeng-5.2.8
 
 # Dry run (preview changes without writing files)
-bundle exec ruby generate-formula.rb --version eeng-5.2.7 --dry-run
+bundle exec ruby generate-formula.rb --version eeng-5.2.8 --dry-run
 ----
 
 == Repository Structure
