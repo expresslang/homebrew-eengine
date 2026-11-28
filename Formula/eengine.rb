@@ -3,30 +3,30 @@
 class Eengine < Formula
   desc "Express Engine - EXPRESS language parser and interpreter"
   homepage "https://github.com/expresslang/eengine-releases"
-  version "5.2.8"
+  version "5.2.9"
   license "BSD-2-Clause"
 
   on_macos do
     on_arm do
-      url "https://github.com/expresslang/eengine-releases/releases/download/eeng-5.2.8/eengine-5.2.8-mac-arm64-sbcl"
-      sha256 "423ecb5bbe401b1c720c526619e4f03f9e64e0dc0fdd134100c35cbfc5e49384"
+      url "https://github.com/expresslang/eengine-releases/releases/download/eeng-5.2.9/eengine-5.2.9-mac-arm64-sbcl"
+      sha256 "f1d186f1f887718a5e6ee7c3ba0f9194f1e5bb876770df5d8598140f2529776d"
     end
 
     on_intel do
-      url "https://github.com/expresslang/eengine-releases/releases/download/eeng-5.2.8/eengine-5.2.8-mac-x86-64-sbcl"
-      sha256 "bc3b73a060b138756f3277affe1ff85de38288de586ec4816fb4e5f6e124df17"
+      url "https://github.com/expresslang/eengine-releases/releases/download/eeng-5.2.9/eengine-5.2.9-mac-x86-64-sbcl"
+      sha256 "82c5fa48dccedfea51687d71206591492242b8563eb0a395a016b9c2a730cc35"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/expresslang/eengine-releases/releases/download/eeng-5.2.8/eengine-5.2.8-lnx-x86-64-sbcl"
-      sha256 "87e9c28f12c926cead36b1126305d62fe50d9dabb401aa17d196d34da5a61bf1"
+      url "https://github.com/expresslang/eengine-releases/releases/download/eeng-5.2.9/eengine-5.2.9-lnx-x86-64-sbcl"
+      sha256 "5850283953d62506dd6e1ceb1c74f58f43371c7e9073f13b33e4360718056462"
     end
 
     on_arm do
-      url "https://github.com/expresslang/eengine-releases/releases/download/eeng-5.2.8/eengine-5.2.8-lnx-arm64-sbcl"
-      sha256 "e8e4f3d31fd387c702681d6c0636b867e7eb577bf92676cf58ee7188ee6cd548"
+      url "https://github.com/expresslang/eengine-releases/releases/download/eeng-5.2.9/eengine-5.2.9-lnx-arm64-sbcl"
+      sha256 "6d0e803fc3414ed1a8835eeb8fbaa40e5db3dc5f2b547ac7162d1282f9b2be7a"
     end
   end
 
